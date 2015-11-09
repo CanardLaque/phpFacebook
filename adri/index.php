@@ -59,7 +59,9 @@ while ($donnees = $req->fetch())
 } // Fin de la boucle des commentaires
 $req->closeCursor();
 ?>
+
 </body>
+
 </html>
 
 
