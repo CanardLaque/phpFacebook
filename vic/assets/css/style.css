@@ -4,4 +4,39 @@ body {
 .todo-true {
   text-decoration: line-through; }
 
+.add-post {
+  margin: 10px 0px; }
+
+.fond {
+  background-color: rgba(204, 204, 204, 0.59);
+  padding: 30px;
+  border-radius: 10px; }
+  .fond .post {
+    padding: 0px 0px 20px 0px; }
+    .fond .post .dinline {
+      padding-bottom: 10px; }
+      .fond .post .dinline .user {
+        padding: 10px;
+        font-size: 2em; }
+        .fond .post .dinline .user .id {
+          margin-left: 20%; }
+  .fond .comments {
+    margin: 0px 0px 10px 0px; }
+    .fond .comments .backgris {
+      background-color: rgba(255, 255, 255, 0.31);
+      padding: 5px;
+      border-radius: 5px; }
+    .fond .comments .dinline {
+      padding-bottom: 10px; }
+      .fond .comments .dinline .user {
+        padding: 10px;
+        font-size: 2em; }
+        .fond .comments .dinline .user .id {
+          margin-left: 20%; }
+  .fond .post-comment {
+    margin-top: 50px; }
+
+.btn-primary {
+  width: 100%; }
+
 /*# sourceMappingURL=style.css.map */
