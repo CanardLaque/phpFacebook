@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todolistApp">
+<head>
+
+    <meta charset="UTF-8">
+    <title>ToDoList</title>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</head>
+
+<body>
+
+<div class="container todo-container" ng-controller="todoController">
+
+    <h2>{{remaining()}} restantes sur un total de {{todos.length}} </h2>
+
+    <form ng-submit="add()" action="#">
+        <input type="text" ng-model="newTaskName" placeholder="Nouvelle tâche ...">
+        <input type="submit" value="OK">
+    </form>
+
+    <ul class="list-group">
+        <li ng-repeat="todo in todos" class="list-group-item">
+            <input ng-model="todo.done" type="checkbox">
+            <span class="todo-{{todo.done}}">{{todo.taskName}}</span>
+        </li>
+    </ul>
+
+</div>
+
+
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+</html>
