@@ -14,21 +14,25 @@
 
 <body>
 
-<div class="container todo-container" ng-controller="todoController">
+<div class="container">
+    <div class="row">
+    <h1>Facebook Adrien Cadot - Alexandre Payen - Victor Chanson </h1>
+    </div>
 
-    <h2>{{remaining()}} restantes sur un total de {{todos.length}} </h2>
+    <div class="col-md-4 col-md-offset-2">
+        <form>
+            <div class="form-group">
+                <label for="identifiant">Identifiant</label>
+                <input type="text" class="form-control" id="identifiant" placeholder="Identifiant">
+            </div>
+            <div class="form-group">
+                <label>Commentaire</label>
+                <textarea class="form-control" placeholder="Entrez votre commentaire" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
 
-    <form ng-submit="add()" action="#">
-        <input type="text" ng-model="newTaskName" placeholder="Nouvelle tâche ...">
-        <input type="submit" value="OK">
-    </form>
-
-    <ul class="list-group">
-        <li ng-repeat="todo in todos" class="list-group-item">
-            <input ng-model="todo.done" type="checkbox">
-            <span class="todo-{{todo.done}}">{{todo.taskName}}</span>
-        </li>
-    </ul>
+    </div>
 
 </div>
 
