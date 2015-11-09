@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="todolistApp">
+<html lang="en" ng-app="phpFacebookApp">
 <head>
 
     <meta charset="UTF-8">
@@ -14,39 +14,31 @@
 
 <body>
 
-<div class="container">
+<div class="container" ng-controller="phpFacebookController">
+
     <div class="row">
         <h1 class="text-center">Facebook Adrien Cadot - Alexandre Payen - Victor Chanson </h1>
     </div>
-
+    <!--AJOUTER UN POST-->
     <div class="col-md-6 col-md-offset-3 ">
         <button type="submit" class="btn  btn-primary add-post"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>       New Post</button>
     </div>
+    <!--AJOUTER UN POST end-->
 
+    <!--UN POST ENTIER-->
     <div class="col-md-6 col-md-offset-3 fond">
-
+        <!--LE POST-->
         <div class="row post">
             <div class="dinline">
                 <span  class="glyphicon glyphicon-user user" aria-hidden="true"><span class="id">Victor</span>   </span>
-
             </div>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur dignissimos distinctio dolorem ducimus itaque nesciunt optio rem rerum temporibus!
             </p>
         </div>
+        <!--LE POST end-->
 
-        <div class="row comments">
-            <div class="backgris">
-                <div class="dinline">
-                    <span  class="glyphicon glyphicon-user user" aria-hidden="true"><span class="id">Victor</span>   </span>
-
-                </div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur dignissimos distinctio dolorem ducimus itaque nesciunt optio rem rerum temporibus!
-                    </p>
-            </div>
-        </div>
-
+        <!--COMMENTAIRES-->
         <div class="row comments">
             <div class="backgris">
                 <div class="dinline">
@@ -56,11 +48,50 @@
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur dignissimos distinctio dolorem ducimus itaque nesciunt optio rem rerum temporibus!
                 </p>
+
+                <!--COMMENTAIRES DE COMMENTAIRE-->
+                <button type="button" class="btn btn-success" ng-click="addComment()" ><span class="glyphicon glyphicon-plus" aria-hidden="true">     </span>     Commenter ce commentaire</button>
+                <form class="hide" ng-class="class" >
+                    <div class="form-group commentcomment">
+                        <input type="text" class="form-control" id="identifiant" placeholder="Commenter">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary ">Commenter</button>
+                </form>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                        <div class="backgris">
+                            <div class="dinline">
+                                <span  class="glyphicon glyphicon-user user" aria-hidden="true"><span class="id">Victor</span>   </span>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur dignissimos distinctio dolorem ducimus itaque nesciunt optio rem rerum temporibus!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--COMMENTAIRES DE COMMENTAIRE end-->
+
             </div>
         </div>
-        <button type="submit" class="btn  btn-primary">Add Comment</button>
 
-        <div class="row post-comment">
+        <div class="row comments">
+            <div class="backgris">
+                <div class="dinline">
+                    <span  class="glyphicon glyphicon-user user" aria-hidden="true"><span class="id">Victor</span>   </span>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur dignissimos distinctio dolorem ducimus itaque nesciunt optio rem rerum temporibus!
+                </p>
+            </div>
+        </div>
+        <!--COMMENTAIRES end-->
+
+        <!--AJOUTER UN COMMENTAIRES-->
+        <button type="submit" class="btn btn-primary"  ng-click="addComment()" >Add Comment</button>
+
+        <div class="row post-comment hide" ng-class="class">
             <form>
                 <div class="form-group">
                     <label for="identifiant">Identifiant</label>
@@ -73,8 +104,10 @@
                 <button type="submit" class="btn  btn-primary">Submit</button>
             </form>
         </div>
+        <!--AJOUTER UN COMMENTAIRES end-->
 
     </div>
+    <!--UN POST ENTIER end-->
 
 </div>
 
