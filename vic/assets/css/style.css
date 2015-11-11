@@ -1,5 +1,5 @@
 body {
-  background: green; }
+  background-image: url(../img/stardust.png); }
 
 .todo-true {
   text-decoration: line-through; }
@@ -41,16 +41,13 @@ body {
 .btn-primary {
   width: 100%; }
 
-.show {
-  display: block; }
-
 .hide {
   display: none; }
 
-.show2 {
+.show-true {
   display: block; }
 
-.hide2 {
+.show-false {
   display: none; }
 
 /*# sourceMappingURL=style.css.map */
